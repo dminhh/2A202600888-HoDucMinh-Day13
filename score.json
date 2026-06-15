@@ -1,21 +1,21 @@
 {
   "team": "2A202600888-HoDucMinh",
-  "phase": "public",
-  "headline": 100.0,
+  "phase": "private",
+  "headline": 87.63,
   "sub": {
-    "correct": 0.8733,
-    "quality": 0.924,
+    "correct": 0.6575,
+    "quality": 0.7929,
     "error": 1.0,
-    "latency": 0.5177,
-    "cost": 0.0375,
-    "drift": 0.9511,
-    "prompt": 0.8712
+    "latency": 0.5806,
+    "cost": 0.0,
+    "drift": 0.4075,
+    "prompt": 0.7602
   },
-  "diag_f1": 0.952,
-  "n": 120,
-  "n_correct": 94,
+  "diag_f1": 1.0,
+  "n": 80,
+  "n_correct": 46,
   "judge_mode": "offline",
   "weights_hash": "e81a8ed58d93",
-  "key_hash": "9a800fa6968d",
-  "sig": "ec1fe160146bc6097035d29065e0474b77d8654c2e32110384fdbf1253e11e90"
+  "key_hash": "7e3905b75db0",
+  "sig": "7fb569eda1794db279e5fc5f466cb63d209f4bda05c3243ca567cfd3b238c3cf"
 }
