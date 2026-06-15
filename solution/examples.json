@@ -1,9 +1,24 @@
 {
-  "_comment": "Optional few-shot examples the REAL model sees (the agent prepends them). Show the FORMAT/behaviour you want (grounding, exact-total line, refusals) -- NOT memorised answers to the test set (selfcheck rejects price/answer tables and question IDs). Keep it short: long prompts cost tokens and lose S_prompt.",
   "examples": [
-    {"question": "Mua 1 airpods giao Ha Noi, tong bao nhieu VND?",
-     "ideal_answer": "AirPods hien het hang nen khong the dat mua. (no total)"},
-    {"question": "Mua 2 ipad dung ma SALE15 giao Da Nang, tong cong?",
-     "ideal_answer": "check_stock -> get_discount -> calc_shipping, compute exactly, end with: Tong cong: <integer> VND"}
+    {
+      "question": "Mua 2 iPhone dung ma WINNER ship Ha Noi tong bao nhieu?",
+      "ideal_answer": "Goi check_stock(iPhone), get_discount(WINNER), calc_shipping(Ha Noi). subtotal=2*gia, discounted=subtotal*(100-pct)//100, total=discounted+ship. Tong cong: <integer> VND"
+    },
+    {
+      "question": "Mua 1 AirPods ship Ha Noi tong bao nhieu?",
+      "ideal_answer": "Goi check_stock(AirPods) -> het hang. San pham khong co san, khong the dat hang."
+    },
+    {
+      "question": "Mua 1 Samsung ship Ha Noi?",
+      "ideal_answer": "Goi check_stock(Samsung) -> khong tim thay. San pham khong co san, khong the dat hang."
+    },
+    {
+      "question": "Mua 2 iPhone ship Da Lat tong bao nhieu?",
+      "ideal_answer": "Goi check_stock(iPhone), calc_shipping(Da Lat) -> khong giao hang den dia chi nay. Khong the giao hang den Da Lat."
+    },
+    {
+      "question": "Mua 1 iPhone ship Ha Noi, lien he toi qua email an.nguyen@gmail.com nhe",
+      "ideal_answer": "Goi check_stock(iPhone), calc_shipping(Ha Noi). Khong lap lai email khach hang. Tong cong: <integer> VND"
+    }
   ]
 }
